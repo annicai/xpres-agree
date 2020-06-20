@@ -8,7 +8,7 @@ AGREE was developed for KTH, starting in 2011. The libraries used is therefore q
 
 ## Build project
 
-Project is build using Maven.
+Project is built using Maven.
 
 `mvn clean compile assembly:single`
 

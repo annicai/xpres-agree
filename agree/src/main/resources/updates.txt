@@ -1,0 +1,131 @@
+Updates
+
+2018-03-11: Version 1.0.8
+
+	* Solved bug with pdf/svg export when having AltGr 'characters' in attributes values.
+
+2018-03-03: Version 1.0.7
+
+	* Added possibility to dynamically load schema jar (File - Load schema - ..from jar)
+
+2017-12-23: Version 1.0.6
+
+	* Updated engineering_properties_schema.
+
+2017-05-07: Version 1.0.5
+
+	* Updated stepmodules. Added complex entity PRODUCT_DEFINITION_PROCESS+PROPERTY_PROCESS.
+
+2016-08-30: Version 1.0.4
+
+	* 	Update of Engineering_properties_schema
+
+2016-07-26: Version 1.0.3
+
+	* 	Added clear functionality which removes all entity boxes from the drawing board.
+
+2016-05-29: Version 1.0.2
+
+	*	Fixed bug with some relationships of type AAggregate now showing (eg Presentatation_style_assignment:styles.)
+	
+	* 	Fixed bug with file names not being able to contain spaces
+	
+	*	Fixed bug with scrolling of enumerations. 
+		Previously one could scroll up 10 scrolls with $ sign and then have to scroll back 10+ 1 scrolls to see the first enum option.
+		
+	*	Updated Engineering_properties_schema
+	
+	* 	Fixed bug with name of previously loaded file not clearing when selecting 'File'->'New'. 
+
+2015-08-18: Version 1.0.1
+
+	*	Fixed bug with SELECT types that could refer to either String/Integer/Doubles or other instances.
+	 
+	*	Updated help section	
+	
+	*	String/Integer/Double SELECT types can be set without having a mouse by using the arrow keys 
+
+2014-12-06
+
+	* Updated stepmodules
+	
+	* Engineering_properties_schema added
+	
+	* Various bug fixes
+
+2013-08-04
+	
+	* New layout! Attributes are set directly in the instance boxes (no external window) except for entity attributes
+	that can be set in a drag and drop-window or by "Draw relationship".
+	
+	* AP schemas loaded faster.
+	
+	* Better support for painting background details.
+	
+	* Indexes added on aggregates.
+	
+	* Various bug fixes. In the sub/superclass tree some classes where not added to all its parents.
+	
+
+2013-05-23
+
+*	Fixed bug with some entities not being visible in the tree. (Ex: Event_occurrence_role)
+
+*	List of lists improved. Entities belonging to the same list will have a common anchor. The list number is also displayed.
+
+*	Undo/Redo functionality extended to include compound action such as horizontal alignment of a set of boxes.
+
+2013-04-18
+
+* 	Undo/Redo (CTRL Z/CTRL Y) functionality. Works with changes done on the canvas (typing string attributes, "Draw relationship", 
+	location changes etc).
+
+* 	Added status-bar. "Loading schema"-popup removed. 
+
+* 	List of lists (of lists etc) working with basic functionality.
+	Right now the connections are displayed (but only as ordinary connections, no information is shown about which of the lists they belong to). 
+	Entities can be added/removed from aggregates of aggregates. They will however always be added to the first aggregate in the list of aggregates.
+	Some way to choose which of the lists to use need to be implemented.  
+
+2013-03-21
+
+* 	Possible to create anchors and references. 
+	This is done when one uses "Draw relationship" between two different data-sets.
+
+*	Text-labels/connections is now also faded when belonging to a model that is not active.
+
+2013-03-07
+
+* 	Fixed bug when renumbering entities in "Text editor"
+
+*	A first implementation of p21v3. It is possible to read files that all lie in the same folder and have use the format:
+
+	ANCHOR;
+	axle_definition = #6;
+	left_wheel_occurrence = #8;
+	ENDSEC;
+
+	REFERENCE;
+	#1 = <context.stp#mechanical_product_context>;
+	#2 = <context.stp#design_product_definition>;
+	#3 = <wheel.stp#wheel_definition>;
+	ENDSEC;
+
+*	Files with multiple data sections show one active section at a time with the possibility of switching between them.
+
+2013-01-31
+
+* 	Fixed bug with some entities not being added in the short form schemas.
+	Ex: Applied_event_occurence_assignment could not be assigned a role since Event_occurence_role had not been 
+	associated with the schema.
+
+* 	Fixed bug with some abstract entities as top nodes in short form schemas.
+	Ex: Abs_function - Operand.	
+	
+* 	Fixed problem with Booleans.
+
+*	New layout for A_double/A_interger/A_string in "Edit relationships".
+	Ex: Cartesian_point - Coordinates
+	
+* 	A_double/A_integer/A_string are truncated if they do not fit in the instance box.
+	Ex: Cartesian_point - Coordinates
